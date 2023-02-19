@@ -12,12 +12,6 @@ Das der Fokus beim Arbeiten mit git liegt, müsst ihr folgende Szenarien kreiere
 •	muss einen merge conflict lösen
 
  # Git_MiniProjekt
-Gruppenmitglieder :	Binod Aryal
-					Andreas Pieczyk
-					Abdurrahman Yildirim
-					Lukas Nachtigal
-
-# ********************************************************************************************************
 Ziel : 			Erstellen einer Website mit 3 oder mehr links zu den Teilnehmern und ein 
 				kleines Portfolio
 

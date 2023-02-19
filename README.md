@@ -12,12 +12,6 @@ Das der Fokus beim Arbeiten mit git liegt, müsst ihr folgende Szenarien kreiere
 •	muss einen merge conflict lösen
 
  # Git_MiniProjekt
-Gruppenmitglieder :	Binod Aryal
-					Andreas Pieczyk
-					Abdurrahman Yildirim
-					Lukas Nachtigal
-
-# ******************************************************************************************
 Ziel : 			Erstellen einer Website mit 3 oder mehr links zu den Teilnehmern und ein 
 				kleines Portfolio
 
@@ -39,21 +33,15 @@ Benutzer : Binod
 #nach der comfiramtion in email --->auf linke seite auf Git logo (katze) sehen wir die geklonte documents.
 
 *********************************************************************************************
-#git bash öffnen --> befehl ausführen
-binod@Binod MINGW64 ~$ git config --global user.name          //username
+Git commands:
+$ git config --global user.name        
                        unicodebinod
-
-binod@Binod MINGW64 ~$ git config --global user.email        //user email
+$ git config --global user.email       
                       binodaryal@outlook.de
-
-binod@Binod MINGW64 ~$ git clone https://github.com/DonXec/Git_MiniProjeke.git     
-Cloning into 'Git-Miniprojekt-G4'...
-
-binod@Binod MINGW64 ~ $ pwd
-                     /c/Users/binod
-
-binod@Binod MINGW64 ~ls  -al         //list the datei in Folder Binod 
-                      
+$ git clone https://github.com/DonXec/Git_MiniProjeke.git     
+$ pwd
+/c/Users/binod
+$ ls  -al         //list the datei in Folder Binod 
  Documents/
  Downloads/
  Druckumgebung@
@@ -61,42 +49,55 @@ binod@Binod MINGW64 ~ls  -al         //list the datei in Folder Binod
  Favorites/
  Git_MiniProjekt/
  
-binod@Binod MINGW64 ~$ cd Git_MiniProjekt/        //change Directory To  Git_MiniProjekt
+ $ cd Git_MiniProjekt/       
+ls  
 
-binod@Binod MINGW64 ~/Git_MiniProjekt (main) ls   //show the datei in GMP
-
-binod@Binod MINGW64 ~/Git_MiniProjekt (main) $ git pull          
-//git pull again inorder to get changes made from andere Teilnehmer in the current project                                         
+//git pull again inorder to get changes made from andere Teilnehmer in the current project 
+$ git pull          
+                                        
 
 ********************************************************************
 # now create neue branch binod ---inorder to work on the project individaully 
 ********************************************************************
-//creat an new branch binod
-binod@Binod MINGW64 ~/Git-Miniprojekt-G4 (main)$ git branch binod        
-
-//enter into the branch binod-----switched to branch 'binod'
-binod@Binod MINGW64 ~/Git-Miniprojekt-G4 (main) $ git checkout binod       
-
- //list all the branches 
-binod@Binod MINGW64 ~/Git_MiniProjekt (binod)$ git branch         
+$ git branch binod     //creat an new branch binod  
+$ git checkout binod   //switched to branch 'binod'    
+$ git branch           //list all the branches 
 * binod              //* denotes =current branch binod 
   main
-
-binod@Binod MINGW64 ~/Git-Miniprojekt-G4 (binod)$ ls
+$ls
 README.md  abdu.html  andreas.html  binod.html  index.html   
+***************************************************************************
+# now work on visual studio code 
+nachdem Dateien Bearbeitung--form own branch in 
+git status 
+git add .      
+git commit -m "made some changes in the Project"
 
-# nachdem beatbeiten in own branch 
-git add binod.html       git commit -m "binod.html commit
-git merge binod
-git push -u -f origin <curentbranch>
+ //Switch back to the main branch:,
+ git checkout main
 
-In Gitgub: 
-   Compare and pull ----create pull request---merge pul
-   Delete branch
-   
-In Visual Studio Code:
-    git checkoutmain
-	git branch -d <branchname>
-	git branch
+//Merge the changes from the "my-feature-branch" branch into the main branch:
+git merge binod      
+
+git push origin main
+  
+//now delete the featue branch binod  !!to delete the feature branch --u 001habe to be in the main branch,0
+git branch -d binod  
+git branch -D binod  //delete after merge 
+
+****************************************************************
+conflict ---to resolve the conflict through vim editor 
+********************************************************
+git pull origin main   
+git status
+
+text bearbeiten in vim 
+
+git  add .
+git commit -m " commeantar"
+git push origin binod
+
+
+
 
 
